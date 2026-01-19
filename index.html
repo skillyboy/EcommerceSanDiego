@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>African Food Texas - Order Online</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">African Food Texas</p>
+        <h1>Pick your favorites, add to cart, and checkout fast.</h1>
+        <p class="subhead">
+          No account required. Review your cart and place your order in just a few taps.
+        </p>
+        <ul class="steps">
+          <li><strong>1.</strong> Pick items</li>
+          <li><strong>2.</strong> Adjust quantities</li>
+          <li><strong>3.</strong> Checkout as guest</li>
+        </ul>
+      </div>
+      <div class="hero-card">
+        <h2>Your cart</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+          <div>
+            <span>Items</span>
+            <strong id="cart-count">0</strong>
+          </div>
+          <div>
+            <span>Total</span>
+            <strong id="cart-total">$0.00</strong>
+          </div>
+        </div>
+        <button id="clear-cart" class="secondary" disabled>Clear cart</button>
+        <button id="checkout-btn" class="primary" disabled>Checkout (no signup)</button>
+        <p id="checkout-note" class="note">Add items to unlock checkout.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="menu" aria-labelledby="menu-heading">
+        <div class="menu-heading">
+          <h2 id="menu-heading">Select your items</h2>
+          <p>Tap any dish to add it to your cart. You can update quantities anytime.</p>
+        </div>
+        <div id="menu-grid" class="menu-grid"></div>
+      </section>
+
+      <section class="checkout" aria-labelledby="checkout-heading">
+        <div>
+          <h2 id="checkout-heading">Fast checkout</h2>
+          <p>
+            Share a name and contact number to confirm your order. We will call to finalize delivery details.
+          </p>
+        </div>
+        <form id="checkout-form" class="checkout-form">
+          <label>
+            Full name
+            <input name="name" type="text" placeholder="e.g. Ada Okafor" required />
+          </label>
+          <label>
+            Phone number
+            <input name="phone" type="tel" placeholder="e.g. (555) 555-0147" required />
+          </label>
+          <label>
+            Delivery notes (optional)
+            <textarea name="notes" rows="3" placeholder="Add spice level, pickup time, or address"></textarea>
+          </label>
+          <button class="primary" type="submit">Place order</button>
+          <p class="note">No account needed. You can check out as a guest.</p>
+        </form>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
